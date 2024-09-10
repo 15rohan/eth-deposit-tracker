@@ -21,14 +21,14 @@ cd eth-deposit-tracker
 ```
 
 ### 2. Install Dependencies
-Install the necessary dependencies using npm:
+Install the necessary dependencies using `npm`:
 
 ```bash
 npm install
 ```
 
 ### 3. Environment Configuration
-Create a .env file in the `backend` directory of your project. This file will store sensitive information and configuration settings.
+Create a `.env` file in the `backend` directory of your project. This file will store sensitive information and configuration settings.
 
 Add the following environment variables to the .env file:
 
@@ -43,10 +43,10 @@ TELEGRAM_CHAT_ID=your-telegram-chat-id
 Replace the placeholder values with your actual configuration details.
 
 ### 4.  Setup MongoDB
-Ensure MongoDB is running and accessible. If using MongoDB Atlas, make sure your URI in the .env file is correct. You can use a local instance or a cloud-based MongoDB service.
+Ensure MongoDB is running and accessible. If using MongoDB Atlas, make sure your URI in the `.env` file is correct. You can use a local instance or a cloud-based MongoDB service.
 
 ### 5. Update and Verify Contract Address
-Update the BEACON_DEPOSIT_ADDRESS in your .env file if needed:
+Update the `BEACON_DEPOSIT_ADDRESS` in your `.env` file if needed:
 
 ```bash
 BEACON_DEPOSIT_ADDRESS=your-beacon-deposit-contract-address
