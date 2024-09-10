@@ -9,9 +9,9 @@ This application tracks Ethereum deposits made to the Beacon Deposit Contract (0
 - **Node.js**: Version 14 or higher
 - **npm** (Node Package Manager)
 
-## Setup and Installation
+# Setup and Installation
 
-### 1. Clone the Repository
+## 1. Clone the Repository
 
 Clone the repository to your local machine:
 
@@ -20,14 +20,14 @@ git clone https://github.com/15rohan/eth-deposit-tracker.git
 cd eth-deposit-tracker
 ```
 
-### 2. Install Dependencies
+## 2. Install Dependencies
 Install the necessary dependencies using `npm`:
 
 ```bash
 npm install
 ```
 
-### 3. Environment Configuration
+## 3. Environment Configuration
 Create a `.env` file in the `backend` directory of your project. This file will store sensitive information and configuration settings.
 
 Add the following environment variables to the .env file:
@@ -42,17 +42,17 @@ TELEGRAM_CHAT_ID=your-telegram-chat-id
 
 Replace the placeholder values with your actual configuration details.
 
-### 4.  Setup MongoDB
+## 4.  Setup MongoDB
 Ensure MongoDB is running and accessible. If using MongoDB Atlas, make sure your URI in the `.env` file is correct. You can use a local instance or a cloud-based MongoDB service.
 
-### 5. Update and Verify Contract Address
+## 5. Update and Verify Contract Address
 Update the `BEACON_DEPOSIT_ADDRESS` in your `.env` file if needed:
 
 ```bash
 BEACON_DEPOSIT_ADDRESS=your-beacon-deposit-contract-address
 ```
 
-### 6. Running the Application
+## 6. Running the Application
 To start monitoring for deposits, navigate to the `backend` directory and start the application using:
 
 ```bash
@@ -60,7 +60,7 @@ cd backend
 npm start
 ```
 
-### 7. Set Up Telegram Notifications
+## 7. Set Up Telegram Notifications
 
 # Open Telegram: Open the Telegram app on your mobile device or desktop.
 
@@ -68,7 +68,7 @@ npm start
 Search for `@BotFather` in the Telegram search bar.
 Start a chat with BotFather.
 
-# Create a New Bot:
+## Create a New Bot:
 Send the command `/newbot` to BotFather.
 Follow the prompts to set a name and username for your bot.
 After completion, BotFather will provide you with a token. Save this token as it will be used to authenticate your bot.
