@@ -125,7 +125,7 @@ docker build -t eth-deposit-tracker .
 Stopping the Container: You can stop the running container using:
 ```bash
 docker ps
-docker stop <container-id >
+docker stop <container-id>
 ```
 
 Example Dockerfile
