@@ -81,3 +81,15 @@ Open the following URL in your browser, replacing `YOUR_BOT_TOKEN` with the toke
 ```bash
 https://api.telegram.org/botYOUR_BOT_TOKEN/getUpdates
 ```
+
+Look for a JSON object that includes "chat":{"id":YOUR_CHAT_ID}. Note the YOUR_CHAT_ID value, as this is the ID of your chat.
+
+### Configure Environment Variables
+Create or Update .env File:
+In the root directory of your project, create a file named .env if it doesn’t already exist.
+Add the following entries to the .env file, replacing the placeholders with your actual bot token and chat ID:
+
+```bash
+TELEGRAM_BOT_TOKEN=your_bot_token_here
+TELEGRAM_CHAT_ID=your_chat_id_here
+```
