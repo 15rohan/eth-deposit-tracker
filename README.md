@@ -28,7 +28,7 @@ npm install
 ```
 
 ### 3. Environment Configuration
-Create a .env file in the 'backend' directory of your project. This file will store sensitive information and configuration settings.
+Create a .env file in the `backend` directory of your project. This file will store sensitive information and configuration settings.
 
 Add the following environment variables to the .env file:
 
@@ -51,3 +51,15 @@ Update the BEACON_DEPOSIT_ADDRESS in your .env file if needed:
 ```bash
 BEACON_DEPOSIT_ADDRESS=your-beacon-deposit-contract-address
 ```
+
+### 6. Running the Application
+To start monitoring for deposits, navigate to the `backend` directory and start the application using:
+
+```bash
+cd backend
+npm start
+```
+
+### 7. Set Up Telegram Notifications
+
+If you have configured Telegram notifications, the bot will send alerts to the specified chat when a new deposit is detected.
