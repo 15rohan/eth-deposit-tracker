@@ -2,7 +2,7 @@
 
 ## Overview
 
-This application tracks Ethereum deposits made to the Beacon Deposit Contract (0x00000000219ab540356cBB839Cbe05303d7705Fa ). It records deposit details to MongoDB and sends notifications via Telegram.
+This application tracks Ethereum deposits made to the Beacon Deposit Contract (`0x00000000219ab540356cBB839Cbe05303d7705Fa`). It records deposit details to MongoDB and sends notifications via Telegram.
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ npm install
 
 ## 3. Environment Configuration
 Create a `.env` file in the `backend` directory of your project. This file will store sensitive information and configuration settings.
-Add a `PORT` to your file.
+Go to the Alchemy Website. Sign up and get your `ALCHEMY_API_KEY`.
 Add the following environment variables to the `.env` file:
 
 ```bash
@@ -37,10 +37,8 @@ PORT=your-port
 ALCHEMY_API_KEY=your-alchemy-api-key
 ```
 
-Replace the placeholder values with your actual configuration details.
-
 ## 4.  Setup MongoDB
-Ensure MongoDB is running and accessible. If using MongoDB Atlas, make sure your URI in the `.env` file is correct. You can use a local instance or a cloud-based MongoDB service.
+Connect to your MongoDB Database and ensure it is running and accessible. If using MongoDB Atlas, make sure your `MONGO_URI` in the `.env` file is correct. You can use a local instance or a cloud-based MongoDB service. 
 
 ```bash
 MONGO_URI=your-mongo-uri
