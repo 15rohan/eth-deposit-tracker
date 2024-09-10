@@ -2,7 +2,7 @@
 
 ## Overview
 
-This application tracks Ethereum deposits made to a specified beacon deposit contract. It records deposit details to MongoDB and optionally sends notifications via Telegram.
+This application tracks Ethereum deposits made to the Beacon Deposit Contract (0x00000000219ab540356cBB839Cbe05303d7705Fa ). It records deposit details to MongoDB and sends notifications via Telegram.
 
 ## Prerequisites
 
@@ -18,3 +18,11 @@ Clone the repository to your local machine:
 ```bash
 git clone https://github.com/15rohan/eth-deposit-tracker.git
 cd eth-deposit-tracker
+```
+
+### 2. Install Dependencies
+Install the necessary dependencies using npm:
+
+```bash
+npm install
+```
