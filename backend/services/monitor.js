@@ -3,7 +3,7 @@ const provider = require('../config/alchemy');
 const ethers = require('ethers');
 const { sendNotification } = require('../services/notifications');
 
-const beaconDepositAddress = '0x00000000219ab540356cBB839Cbe05303d7705Fa';
+const beaconDepositAddress = process.env.BEACON_DEPOSIT_ADDRESS;
 const abi = [
     "event DepositEvent(bytes pubkey, bytes withdrawal_credentials, bytes amount, bytes signature, bytes index)"
 ];

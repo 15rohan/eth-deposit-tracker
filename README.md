@@ -92,6 +92,66 @@ TELEGRAM_BOT_TOKEN=your_bot_token_here
 TELEGRAM_CHAT_ID=your_chat_id_here
 ```
 
+## 8. Dockerizing the Application
+Follow the steps below to set up Docker and run the application inside a container.
+
+Prerequisites
+Docker must be installed and running on your machine.
+You should have a `.env` file with all required environment variables such as MongoDB connection string, Alchemy API key, and Telegram token.
+Steps to Dockerize and Run the Application:
+
+Build the Docker Image:
+Make sure you are in the root directory where the Dockerfile is located and run the following command:
+```bash
+docker build -t eth-deposit-tracker .
+```
+This command builds a Docker image named `eth-deposit-tracker` from the Dockerfile in the current directory.
+
+Run the Docker Container:
+After building the image, you can run the container using:
+```bash
+docker run --env-file .env -p 8080:8080 eth-deposit-tracker
+```
+
+`--env-file .env`: Loads the environment variables from your .env file.
+`-p 8080:8080`: Maps port 8080 of your container to port 8080 of your host machine.
+`eth-deposit-tracker`: The name of the Docker image you just built.
+
+Rebuilding the Image: If you make changes to your application code, you will need to rebuild the image using:
+```bash
+docker build -t eth-deposit-tracker .
+```
+
+Stopping the Container: You can stop the running container using:
+```bash
+docker ps
+docker stop <container-id >
+```
+
+Example Dockerfile
+Your Dockerfile should look like this:
+
+```bash
+# Use official Node.js image as base
+FROM node:16
+
+# Set working directory inside the container
+WORKDIR /app
+
+# Copy package.json and install dependencies
+COPY package.json .
+RUN npm install
+
+# Copy the rest of the application code
+COPY . .
+
+# Expose the port
+EXPOSE 8080
+
+# Start the application
+CMD ["npm", "start"]
+```
+
 # Grafana Dashboard
 
 This directory contains the JSON file for a Grafana dashboard used for monitoring and visualization.
