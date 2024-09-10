@@ -28,7 +28,7 @@ npm install
 ```
 
 ### 3. Environment Configuration
-Create a .env file in the root directory of your project. This file will store sensitive information and configuration settings.
+Create a .env file in the 'backend' directory of your project. This file will store sensitive information and configuration settings.
 
 Add the following environment variables to the .env file:
 
@@ -38,3 +38,22 @@ MONGODB_URI=your-mongodb-uri
 TELEGRAM_BOT_TOKEN=your-telegram-bot-token
 TELEGRAM_CHAT_ID=your-telegram-chat-id
 ```
+
+### 3. Environment Configuration
+Create a .env file in the 'backend' directory of your project. This file will store sensitive information and configuration settings.
+
+Add the following environment variables to the .env file:
+
+```bash
+ALCHEMY_API_KEY=your-alchemy-api-key
+MONGODB_URI=your-mongodb-uri
+TELEGRAM_BOT_TOKEN=your-telegram-bot-token
+TELEGRAM_CHAT_ID=your-telegram-chat-id
+```
+
+Replace the placeholder values with your actual configuration details:
+
+ALCHEMY_API_KEY: Your Alchemy API key.
+MONGODB_URI: Your MongoDB connection URI.
+TELEGRAM_BOT_TOKEN: Your Telegram bot token (if using Telegram notifications).
+TELEGRAM_CHAT_ID: Your Telegram chat ID (if using Telegram notifications).
