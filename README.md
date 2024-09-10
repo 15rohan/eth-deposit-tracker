@@ -115,3 +115,6 @@ This directory contains the JSON file for a Grafana dashboard used for monitorin
 - Update any relevant variables or settings according to your environment.
 
 For more information on Grafana and how to use it, visit the [Grafana Documentation](https://grafana.com/docs/).
+
+# Conclusion
+By following these steps, you have successfully set up Telegram notifications for your Ethereum deposit tracker application. This will enable you to receive real-time alerts for new deposits directly in your Telegram chat.
