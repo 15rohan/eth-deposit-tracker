@@ -33,27 +33,21 @@ Create a .env file in the 'backend' directory of your project. This file will st
 Add the following environment variables to the .env file:
 
 ```bash
+PORT=your-port
 ALCHEMY_API_KEY=your-alchemy-api-key
-MONGODB_URI=your-mongodb-uri
+MONGO_URI=your-mongodb-uri
 TELEGRAM_BOT_TOKEN=your-telegram-bot-token
 TELEGRAM_CHAT_ID=your-telegram-chat-id
 ```
 
-### 3. Environment Configuration
-Create a .env file in the 'backend' directory of your project. This file will store sensitive information and configuration settings.
+Replace the placeholder values with your actual configuration details.
 
-Add the following environment variables to the .env file:
+### 4.  Setup MongoDB
+Ensure MongoDB is running and accessible. If using MongoDB Atlas, make sure your URI in the .env file is correct. You can use a local instance or a cloud-based MongoDB service.
+
+### 5. Update and Verify Contract Address
+Update the BEACON_DEPOSIT_ADDRESS in your .env file if needed:
 
 ```bash
-ALCHEMY_API_KEY=your-alchemy-api-key
-MONGODB_URI=your-mongodb-uri
-TELEGRAM_BOT_TOKEN=your-telegram-bot-token
-TELEGRAM_CHAT_ID=your-telegram-chat-id
+BEACON_DEPOSIT_ADDRESS=your-beacon-deposit-contract-address
 ```
-
-Replace the placeholder values with your actual configuration details:
-
-ALCHEMY_API_KEY: Your Alchemy API key.
-MONGODB_URI: Your MongoDB connection URI.
-TELEGRAM_BOT_TOKEN: Your Telegram bot token (if using Telegram notifications).
-TELEGRAM_CHAT_ID: Your Telegram chat ID (if using Telegram notifications).
