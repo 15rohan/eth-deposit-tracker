@@ -62,4 +62,22 @@ npm start
 
 ### 7. Set Up Telegram Notifications
 
-If you have configured Telegram notifications, the bot will send alerts to the specified chat when a new deposit is detected.
+# Open Telegram: Open the Telegram app on your mobile device or desktop.
+
+# Start a Chat with BotFather:
+Search for `@BotFather` in the Telegram search bar.
+Start a chat with BotFather.
+
+# Create a New Bot:
+Send the command `/newbot` to BotFather.
+Follow the prompts to set a name and username for your bot.
+After completion, BotFather will provide you with a token. Save this token as it will be used to authenticate your bot.
+
+# Obtain Your Chat ID
+Find Your Chat ID:
+Start a chat with your new bot (search for the bot by its username and send a message).
+Open the following URL in your browser, replacing `YOUR_BOT_TOKEN` with the token you received from BotFather:
+
+```bash
+https://api.telegram.org/botYOUR_BOT_TOKEN/getUpdates
+```
