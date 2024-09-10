@@ -15,8 +15,7 @@ const DepositSchema = new mongoose.Schema({
     },
     hash: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     pubkey: {
         type: String,

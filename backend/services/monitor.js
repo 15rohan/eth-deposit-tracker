@@ -1,26 +1,22 @@
 const Deposit = require('../models/deposit');
 const provider = require('../config/alchemy');
+const ethers = require('ethers');
+const { sendNotification } = require('../services/notifications');
 
 const beaconDepositAddress = '0x00000000219ab540356cBB839Cbe05303d7705Fa';
+const abi = [
+    "event DepositEvent(bytes pubkey, bytes withdrawal_credentials, bytes amount, bytes signature, bytes index)"
+];
 
 const recordDeposit = async (deposit) => {
     try {
-        // Checking for existing Deposit in DB
-        const existingDeposit = await Deposit.findOne({ hash: deposit.hash });
-        if (existingDeposit) {
-            console.log('Deposit already exists:', deposit.hash);
-            return;
-        }
         const newDeposit = new Deposit(deposit);
         await newDeposit.save();
         console.log('Deposit saved:', deposit.hash);
+
+        await sendNotification(`A new deposit has been recorded: ${deposit.hash}`);
     } catch (error) {
-        if (error.code === 11000) {
-            // Duplicate hash error
-            console.log('Deposit already exists:', deposit.hash);
-        } else {
-            console.error('Error saving deposit:', error);
-        }
+        console.error('Error saving deposit:', error);
     }
 };
 
