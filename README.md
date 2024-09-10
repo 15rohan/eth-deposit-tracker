@@ -29,21 +29,22 @@ npm install
 
 ## 3. Environment Configuration
 Create a `.env` file in the `backend` directory of your project. This file will store sensitive information and configuration settings.
-
-Add the following environment variables to the .env file:
+Add a `PORT` to your file.
+Add the following environment variables to the `.env` file:
 
 ```bash
 PORT=your-port
 ALCHEMY_API_KEY=your-alchemy-api-key
-MONGO_URI=your-mongodb-uri
-TELEGRAM_BOT_TOKEN=your-telegram-bot-token
-TELEGRAM_CHAT_ID=your-telegram-chat-id
 ```
 
 Replace the placeholder values with your actual configuration details.
 
 ## 4.  Setup MongoDB
 Ensure MongoDB is running and accessible. If using MongoDB Atlas, make sure your URI in the `.env` file is correct. You can use a local instance or a cloud-based MongoDB service.
+
+```bash
+MONGO_URI=your-mongo-uri
+```
 
 ## 5. Update and Verify Contract Address
 Update the `BEACON_DEPOSIT_ADDRESS` in your `.env` file if needed:
